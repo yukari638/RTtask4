@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>RaiseTech課題4</title>
+	<link href="/css/task4.css" rel="stylesheet"></link>
+</head>
+<header>
+	<h1>RaiseTech課題4</h1>
+	<h3>DBに接続して、CRAD処理のRead処理をやってみよう！</h3>
+</header>
+<body>
+	<section>
+		<p class="borderleft">STS4を使って作成しました。フレームワークやライブラリは以下の通りです。</p><br>
+		<table>
+			<caption>
+				<p>主なツール</p>
+			</caption>
+			<tr>
+				<th>フレームワーク</th>	
+				<th>テンプレートエンジン</th>
+				<th>O/Rマッパー</th>
+				<th>RDBMS</th>
+			</tr>
+			<tr th:each="tool : ${useTool}" th:object="${tool}">
+				<td th:text="*{framework}"></td>
+				<td th:text="*{template}"></td>
+				<td th:text="*{orm}"></td>
+				<td th:text="*{rdbms}"></td>
+			</tr>
+		</table>
+	</section>
+</body>
+</html>
